@@ -5,7 +5,7 @@ import reducer from './reducer'
 
 export default function App() {
     const [state, dispatch] = useReducer(reducer, JSON.parse
-        (localStorage.getItem('todos')))
+        (localStorage.getItem('todos')) || [])
     const [todoTitle, setTodoTitle] = useState('')
 
     useEffect(() => {
